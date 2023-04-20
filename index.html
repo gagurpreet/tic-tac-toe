@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="./tictac.js"></script>
+</head>
+<body>
+	<header> <h1>Tic Tac Toe Game</h1></header>
+	
+	<main>
+		<section>
+			<section class="grid">
+				<div class="row1cool1"></div>
+				<div class="row2col1"></div>
+				<div class="row3col1"></div>
+
+				<div class="row1col2"></div>
+				<div class="row2col2"></div>
+				<div class="row3col2"></div>
+				
+				<div class="row1col3"></div>
+				<div class="row2col3"></div>
+				<div class="row3col3"></div>
+			</section>
+		</section>
+		var select1 = document.querySelector('#div1');
+		  select1.addEventListener('click', function(){
+		   select1.className ='red-background'
+		//    console.log(select1.className )
+		   //select1.style.backgroundColor = 'red';
+		})
+
+		var select2 = document.querySelector('#div2');
+		select2.addEventListener('click', function(){
+		   // select2.style.backgroundColor = 'red';
+		   select2.className ='red-background'
+		})
+
+		var select3 = document.querySelector('#div3');
+		select3.addEventListener('click', function(){
+	   //   select3.style.backgroundColor = 'red';
+		   select3.className ='red-background'
+		})
+		
+		 var boxes = document.querySelector('.boxes');
+		 boxes.addEventListener('click', function(event){
+			console.log(event.target.className)
+			//console.log(select1)
+			if (event.target.className='red-background'){
+				boxes.className ='green-background'
+			}
+		 })
+	</main>
+
+</body>
+</html>
