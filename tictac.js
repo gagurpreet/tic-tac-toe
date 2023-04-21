@@ -1,18 +1,21 @@
-
 		
-var board = ['', '', '', '', '', '', '' ,'', ''];
-function clickRecord(index){
-	if(board[index]!==''){
-	return;
-	}else{
-	board[index]= "X"
+	
+var board = document.querySelector('.board');
+var clicks = 0
+board.addEventListener('click', function(event){
+	console.log(event.target.textContent)
+	var clickedBox= event.target
+	if(clickedBox!==''){
+		clicks= clicks+1;
+		if(clicks!==2){
+		clickedBox.textContent = "X";
+		}else{
+			clickedBox.textContent = "O";
+		}
 	}
-	}
-				
-var click = document.querySelector('.board');
-		click.addEventListener('click', function(event){
-			console.log(event.target.className)
-			click.style.background ='red'
-			click.textContent = "X";
-		 })
+	
+})
+	// click.style.background ='red'
+	// 
+		
 		
