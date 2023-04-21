@@ -9,9 +9,10 @@ function clickRecord(index){
 	}
 	}
 				
-	var click = document.querySelector('.board');
+var click = document.querySelector('.board');
 		click.addEventListener('click', function(event){
 			console.log(event.target.className)
+			click.style.background ='red'
 			click.textContent = "X";
 		 })
 		
