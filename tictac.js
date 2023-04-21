@@ -8,7 +8,8 @@ board.addEventListener('click', function(event){
 
 		if(clickedBox!=='' && clicks%2===0){
 		clicks= clicks+1;	
-		clickedBox.textContent = "X";
+		 
+			9-clickedBox.textContent = "X";
 			if(box1.textContent ==="X" && box2.textContent==="X" && box3.textContent==="X"){
 				console.log(" X player Won!!!")
 			}else if(box4.textContent ==="X" && box5.textContent==="X" && box6.textContent==="X"){
@@ -45,8 +46,11 @@ board.addEventListener('click', function(event){
 			}else if(box3.textContent ==="O" && box5.textContent==="O" && box7.textContent==="O"){
 				console.log(" O player Won!!!")
 			}
+		}else{
+			console.log("Macth is draw")
+		}	
 			clicks= clicks+1;
-		}
+	}	
 })
  //var vertical = document.querySelector('')
 
