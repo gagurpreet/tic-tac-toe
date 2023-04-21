@@ -1,4 +1,3 @@
-		
 	
 var board = document.querySelector('.board');
 var clicks = 0
@@ -6,10 +5,9 @@ board.addEventListener('click', function(event){
 	console.log(event.target)
 	var clickedBox= event.target
 
-		if(clickedBox!=='' && clicks%2===0){
+	if(clickedBox!=='' && clicks%2===0){
 		clicks= clicks+1;	
-		 
-			9-clickedBox.textContent = "X";
+			clickedBox.textContent = "X";
 			if(box1.textContent ==="X" && box2.textContent==="X" && box3.textContent==="X"){
 				console.log(" X player Won!!!")
 			}else if(box4.textContent ==="X" && box5.textContent==="X" && box6.textContent==="X"){
@@ -27,7 +25,7 @@ board.addEventListener('click', function(event){
 			}else if(box3.textContent ==="X" && box5.textContent==="X" && box7.textContent==="X"){
 				console.log(" X player Won!!!")
 			}
-		}else{
+	}else{
 			clickedBox.textContent="O"
 			if(box1.textContent ==="O" && box2.textContent==="O" && box3.textContent==="O"){
 				console.log(" O player Won!!!")
@@ -46,11 +44,16 @@ board.addEventListener('click', function(event){
 			}else if(box3.textContent ==="O" && box5.textContent==="O" && box7.textContent==="O"){
 				console.log(" O player Won!!!")
 			}
-		}else{
-			console.log("Macth is draw")
-		}	
-			clicks= clicks+1;
+	
+	if(clickedBox.textContent=="X" ||clickedBox.textContent=="O" ){
+			console.log("Use another box!")
+				}
 	}	
+			clicks= clicks+1;
+	
+	
+
+	}
 })
  //var vertical = document.querySelector('')
 
