@@ -1,5 +1,5 @@
 	
-var boxes = document.querySelectorAll('#boxes');
+var boxes = document.querySelectorAll('.board');
 var winMsg = document.querySelector('#winMsg');
 var refreshBtn = document.querySelector('#refreshBtn')
 var winConditions= [
@@ -15,21 +15,24 @@ var winConditions= [
 var options= ['','','','','','','','',''];
 var firstPlayer= 'X';
 
-var running = 0;
-var clicks = 0
+var running = false;
+// var clicks = 0
 function startGame(){
 	var boxes= boxes.addEventListener('click', cellClicked)
 		refreshBtn.addEventListener('click', restartGame);
 		winMsg.textContent = firstPlayer + "'s turn"
-		running = 1;
+		running = true;
 }
 
+
 function cellClicked(){
-	var boxIndex = div.value(boxIndex);
+	var boxIndex = div.value(box('.board'));
 	if(options[boxIndex]!= ''|| !running){
 		return;
 	}
 	updatebox(box,boxIndex);
+	changePlayer();
+	checkWinner();
 }
 
 function updatebox(box, index){
