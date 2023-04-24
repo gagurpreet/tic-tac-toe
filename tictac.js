@@ -25,8 +25,10 @@ board.addEventListener('click', function(event){
 			}else if(box3.textContent ==="X" && box5.textContent==="X" && box7.textContent==="X"){
 				console.log(" X player Won!!!")
 			}
-	}else if{
-			clickedBox.textContent="O";
+	}else if(clickedBox=='' && clicks%2===0){
+			console.log("Match is draw!!")
+	}else{
+			clickedBox.textContent="O"
 				if(box1.textContent ==="O" && box2.textContent==="O" && box3.textContent==="O"){
 					console.log(" O player Won!!!")
 				}else if(box4.textContent ==="O" && box5.textContent==="O" && box6.textContent==="O"){
@@ -44,12 +46,9 @@ board.addEventListener('click', function(event){
 				}else if(box3.textContent ==="O" && box5.textContent==="O" && box7.textContent==="O"){
 					console.log(" O player Won!!!")
 				}
-	} else {
-		if(clickedBox!=='' && clicks%2===0){
-		console.log("Match is draw!!")
 	}
 	
-	}		clicks= clicks+1;
+			clicks= clicks+1;
 
 })
 
