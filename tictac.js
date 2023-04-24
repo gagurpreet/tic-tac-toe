@@ -1,12 +1,12 @@
 	
 var board = document.querySelector('.board');
-var clicks = 0;
-
+var whoesTurn = 'X';
+var turn = 0;
 board.addEventListener('click', function(event){
 	var clickedBox= event.target
-
-	if(clickedBox!=='' && clicks%2===0){
-		clicks= clicks+1;	
+	console.log( clickedBox)
+	if(clickedBox!=='' && whoesTurn ==='X' && turn%2===0){
+			
 			clickedBox.textContent = "X";
 			if(box1.textContent ==="X" && box2.textContent==="X" && box3.textContent==="X"){
 				console.log(" X player Won!!!")
@@ -25,9 +25,9 @@ board.addEventListener('click', function(event){
 			}else if(box3.textContent ==="X" && box5.textContent==="X" && box7.textContent==="X"){
 				console.log(" X player Won!!!")
 			}
-	}else if(clickedBox=='' && clicks%2===0){
-			console.log("Match is draw!!")
+			turn= turn+1;
 	}else{
+		if(clickedBox!=='' && !turn%2 === 0 )
 			clickedBox.textContent="O"
 				if(box1.textContent ==="O" && box2.textContent==="O" && box3.textContent==="O"){
 					console.log(" O player Won!!!")
@@ -46,10 +46,10 @@ board.addEventListener('click', function(event){
 				}else if(box3.textContent ==="O" && box5.textContent==="O" && box7.textContent==="O"){
 					console.log(" O player Won!!!")
 				}
+				turn = turn +1;
 	}
 	
-			clicks= clicks+1;
-
+			
 })
 
 	
