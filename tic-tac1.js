@@ -9,10 +9,10 @@ board.addEventListener('click', function(event){
 	var clickedBox= event.target
 
 	console.log( clickedBox)
-
+	clickedBox.textContent = "X";
 	if(clickedBox !=='' && turn%2==0 && turn !== 8 && whoesTurn==='X' && gameStatus !==false){
 			
-		clickedBox.textContent = "X";
+		
 		if(box1.textContent ==="X" && box2.textContent==="X" && box3.textContent==="X"){
 			console.log(" X player Won!!!")
 			winMsg.textContent= " X player Won!!!"

@@ -11,6 +11,7 @@ board.addEventListener('click', function(event){
 
 	console.log( clickedBox)
 	clickedBox.textContent = "X";
+	clickedBox.disabled = true;
 	if(clickedBox !=='' && turn%2==0 && turn !== 8 && whoesTurn==='X' && gameStatus !==false){
 			
 		
@@ -46,6 +47,7 @@ board.addEventListener('click', function(event){
 	}else if(clickedBox!=='' && turn%2!== 0 && turn!== 8 && whoesTurn=== 'X'  && gameStatus !==false){
 		
 		clickedBox.textContent="O"
+		clickedBox.disabled = true;
 		if(box1.textContent ==="O" && box2.textContent==="O" && box3.textContent==="O"){
 			winMsg.textContent= " O player Won!!!"
 			gameStatus =false
