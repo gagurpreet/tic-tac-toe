@@ -8,7 +8,7 @@ Welcome to my  **Tic Tac Toe** Game . Entertain yourself with this interesting g
 ![image](https://github.com/gagurpreet/tic-tac-toe/assets/129696535/8cd38ee5-806b-4757-9b1c-66a415cadac2)
 
 ## :pencil2: Planning & Problem Solving
-This is my very first project in 
+This is my very first project in Javascript.
 - Brainstormed ideas to make the web page look appealing to user.
 - Identified the Minimum Viable Product (MVP) criteria.
 
